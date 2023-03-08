@@ -20,6 +20,7 @@ import jakarta.servlet.http.HttpSession;
 @WebFilter(urlPatterns = {"/principal/*"}) // Intercepts all request that come from the project or mapping
 public class FilterAutenticao extends HttpFilter implements Filter {
 
+	private static final long serialVersionUID = 1L;
 	private static Connection connection;
 	
 	public FilterAutenticao() {

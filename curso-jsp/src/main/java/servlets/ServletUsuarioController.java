@@ -31,13 +31,40 @@ public class ServletUsuarioController extends HttpServlet {
 
 			if (acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("deletar")) {
 				String idUser = request.getParameter("id");
-				
-				daoUsuarioRepository.deletarUser(idUser);
-				
-				request.setAttribute("msg", "Excluido com sucesso");
 
+				daoUsuarioRepository.deletarUser(idUser);
+
+				request.setAttribute("msg", "Excluido com sucesso");
+				request.getRequestDispatcher("principal/usuario.jsp").forward(request, response);
+
+			} else if (acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("deletarajax")) {
+				
+				String idUser = request.getParameter("id");
+
+				daoUsuarioRepository.deletarUser(idUser);
+
+				response.getWriter().write("Excluido com sucesso!");
+
+
+			} else if (acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("buscarUserAjax")) {
+				
+				String nomeBusca = request.getParameter("nomeBusca");
+				System.out.println(nomeBusca);
+
+				//daoUsuarioRepository.deletarUser(idUser);
+
+				//response.getWriter().write("Excluido com sucesso!");
+				
+			
+			} 
+			
+			
+			
+			else {
+				request.getRequestDispatcher("principal/usuario.jsp").forward(request, response);
 			}
-			request.getRequestDispatcher("principal/usuario.jsp").forward(request, response);
+
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -48,56 +75,51 @@ public class ServletUsuarioController extends HttpServlet {
 
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		try {
-
-			String msg = "Operação Realizada com Sucesso! (: ";
-
-			String id = request.getParameter("id");
-			String nome = request.getParameter("nome");
-			String email = request.getParameter("email");
-			String login = request.getParameter("login");
-			String senha = request.getParameter("senha");
-
-			id = "0";
-
-			if (!id.isEmpty()) {
-				Long.parseLong(id);
+			
+		String msg = "Operação realizada com sucesso!";	
+		
+		String id = request.getParameter("id");
+		String nome = request.getParameter("nome");
+		String email = request.getParameter("email");
+		String login = request.getParameter("login");
+		String senha = request.getParameter("senha");
+		
+		ModelLogin modelLogin = new ModelLogin();
+		
+		modelLogin.setId(id != null && !id.isEmpty() ? Long.parseLong(id) : null);
+		modelLogin.setNome(nome);
+		modelLogin.setEmail(email);
+		modelLogin.setLogin(login);
+		modelLogin.setSenha(senha);
+		
+		
+		if (daoUsuarioRepository.validarLogin(modelLogin.getLogin()) && modelLogin.getId() == null) {
+			msg = "Já existe usuário com o mesmo login, informe outro login;";
+		}else {
+			if (modelLogin.isNovo()) {
+				msg = "Gravado com sucesso!";
+			}else {
+				msg= "Atualizado com sucesso!";
 			}
-
-			ModelLogin modelLogin = new ModelLogin();
-
-			modelLogin.setId(id != null && id.isEmpty() && id == "" ? Long.parseLong(id) : null);
-			modelLogin.setNome(nome);
-			modelLogin.setEmail(email);
-			modelLogin.setLogin(login);
-			modelLogin.setSenha(senha);
-
-			if (daoUsuarioRepository.validarLogin(modelLogin.getLogin()) && modelLogin.getId() == null) {
-				msg = "Já existe usuário com o mesmo login, informe outro login";
-			} else {
-				if (modelLogin.isNovo()) {
-					msg = "Gravado com sucesso!";
-				} else {
-					msg = "Atuaizado com sucesso.";
-				}
-				modelLogin = daoUsuarioRepository.gravarUsuario(modelLogin);
-			}
-
-			request.setAttribute("msg", msg);
-			request.setAttribute("modelLogin", modelLogin);
-			request.getRequestDispatcher("principal/usuario.jsp").forward(request, response);
-
+			
+		    modelLogin = daoUsuarioRepository.gravarUsuario(modelLogin);
+		}
+		
+		
+		request.setAttribute("msg", msg);
+		request.setAttribute("modolLogin", modelLogin);
+		request.getRequestDispatcher("principal/usuario.jsp").forward(request, response);
+		
 		} catch (Exception e) {
 			e.printStackTrace();
 			RequestDispatcher redirecionar = request.getRequestDispatcher("erro.jsp");
 			request.setAttribute("msg", e.getMessage());
 			redirecionar.forward(request, response);
-
 		}
-
+		
 	}
 
 }
