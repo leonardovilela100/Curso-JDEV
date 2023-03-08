@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\workspace-curso-java-JDEV\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3897528423.index
+\curso-jsp\src\main\java
+C:\workspace-curso-java-JDEV\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1239803670.index
+\curso-jsp\src\main\java
