@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="ModelLogin"/>
+		<item key="selection" value="buscarEditar"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="modelLogin"/>
-			<item value="#d6d6d6"/>
-			<item value=".form-material .form-default.form-static-label .float-label"/>
-			<item value=".form-material ."/>
-			<item value=".form-material .form-default."/>
-			<item value=".form-material .form-default.form-static-l"/>
-			<item value=".form-material"/>
-			<item value=".form-material .form-"/>
-			<item value=".form-material .form-default.form-static-label ."/>
-			<item value="novo"/>
-			<item value="gravar"/>
-			<item value="Cadastro de Usuário"/>
-			<item value="assets"/>
-			<item value="asse"/>
-			<item value="ass"/>
+			<item value="buscarEditar"/>
+			<item value="dadosJsonUser"/>
+			<item value="public"/>
+			<item value="public mo"/>
+			<item value="Model"/>
+			<item value="consul"/>
+			<item value="consulta"/>
+			<item value="formUser"/>
+			<item value="urlAction"/>
+			<item value="requi"/>
+			<item value="req"/>
+			<item value="msg"/>
+			<item value="#exampleModal"/>
+			<item value="limparForm"/>
+			<item value=" limparForm();"/>
 		</list>
 		<list key="replacehistory">
 			<item value="&lt;%=request.getContextPath()%&gt;/assets"/>

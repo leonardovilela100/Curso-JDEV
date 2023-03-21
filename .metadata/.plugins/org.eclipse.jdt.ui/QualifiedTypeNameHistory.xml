@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.mail.PasswordAuthentication"/>
-    <fullyQualifiedTypeName name="javax.mail.Address"/>
-    <fullyQualifiedTypeName name="javax.mail.internet.MimeMessage"/>
-    <fullyQualifiedTypeName name="javax.mail.internet.InternetAddress"/>
-    <fullyQualifiedTypeName name="javax.mail.MessageAware"/>
     <fullyQualifiedTypeName name="javax.mail.Message.RecipientType"/>
     <fullyQualifiedTypeName name="javax.mail.Transport"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
@@ -30,8 +25,6 @@
     <fullyQualifiedTypeName name="model.Userposjava"/>
     <fullyQualifiedTypeName name="model.Telefone"/>
     <fullyQualifiedTypeName name="model.BeanUserFone"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="dao.UserPosDAO"/>
     <fullyQualifiedTypeName name="org.junit.Test"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
@@ -53,11 +46,18 @@
     <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="connection.SingleConnectionBanco"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="model.ModelLogin"/>
     <fullyQualifiedTypeName name="dao.DAOUsuarioRepository"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Long"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="java.lang.Long"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.core.JsonParseException"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.core.JsonParser"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+    <fullyQualifiedTypeName name="model.ModelLogin"/>
+    <fullyQualifiedTypeName name="jakarta.annotation.ManagedBean"/>
+    <fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

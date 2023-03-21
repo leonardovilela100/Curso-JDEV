@@ -38,6 +38,11 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\workspace-curso-java-JDEV\meuprimeiroprojetojsf"/>
+			<item value="C:\workspace-curso-java-JDEV\fron-end"/>
+			<item value="C:\workspace-curso-java-JDEV\curso-jsp"/>
+			<item value="C:\workspace-curso-java-JDEV"/>
+			<item value="C:\workspace-curso-java-JDEV\curso-jsp2"/>
 			<item value="C:\workspace-curso-java\primeiro-programa-java"/>
 		</list>
 	</section>
@@ -80,5 +85,7 @@
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>
